@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import MyHome from './pages/MyHome.vue';
 import MyContact from './pages/MyContact.vue';
 import MyPostList from './pages/MyPostList.vue';
+import MySinglePost from './pages/MySinglePost.vue';
+
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -9,17 +12,22 @@ const router = createRouter(
             {
                 path: '/',
                 name: 'home',
-                componets: MyHome
+                component: MyHome
             },
             {
                 path: '/contattami',
                 name: 'contact',
-                componets: MyContact
+                component: MyContact
             },
             {
                 path: '/progetti',
                 name: 'projects',
-                componets: MyPostList
+                component: MyPostList
+            },
+            {
+                path: '/progetti/:slug',
+                name: 'single-project',
+                component: MySinglePost
             }
         ]
     }

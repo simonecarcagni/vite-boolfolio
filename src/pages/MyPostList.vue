@@ -36,9 +36,14 @@ export default {
 </script>
 
 <template>
-    <div class="container d-flex flex-wrap">
-        <div v-for="project in projects">
-            <ProjectCard :project="project" />
+    <div class="container">
+        <h1>Elenco dei Progetti:</h1>
+        <div class="d-flex flex-wrap">
+
+            <div v-for="project in projects">
+                <ProjectCard :project="project" />
+            </div>
+
         </div>
 
         <nav aria-label="Page navigation example">

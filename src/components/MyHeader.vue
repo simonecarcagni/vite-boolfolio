@@ -1,6 +1,24 @@
 <script>
 export default {
     name: 'MyHeader',
+    data() {
+        return {
+            navItems: [
+                {
+                    name: 'Home',
+                    routeName: 'home'
+                },
+                {
+                    name: 'Contatti',
+                    routeName: 'contact'
+                },
+                {
+                    name: 'Progetti',
+                    routeName: 'projects'
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -14,8 +32,8 @@ export default {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <router-link :to="{ name: contact }" class="nav-link">Contattami</router-link>
+                    <li class="nav-item" v-for="navItem in navItems">
+                        <router-link :to="{ name: navItem.routeName }" class="nav-link">{{ navItem.name }}</router-link>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
