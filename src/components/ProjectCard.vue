@@ -13,6 +13,7 @@ export default {
 </script>
 
 <template>
+    <h1>Elenco completo dei progetti:</h1>
     <div class="card m-5" style="width: 18rem;">
         <img :src="`${this.apiUrl}/storage/${project.image}`" class="card-img-top" :alt="`${project.title}`">
         <div class="card-body">

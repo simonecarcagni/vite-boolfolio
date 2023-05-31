@@ -1,17 +1,17 @@
 <script>
 import MyHeader from './components/MyHeader.vue';
-import MyMain from './components/MyMain.vue';
+
 export default {
   components: {
     MyHeader,
-    MyMain
+
   }
 }
 </script>
 
 <template>
   <MyHeader />
-  <MyMain />
+  <router-view></router-view>
 </template>
 
 <style lang="scss">

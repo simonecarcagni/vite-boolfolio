@@ -1,11 +1,11 @@
 <script>
 import axios from 'axios';
-import ProjectCard from './ProjectCard.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 export default {
     components: {
         ProjectCard
     },
-    name: 'MyMain',
+    name: 'MyPostList',
     data() {
         return {
             apiUrl: 'http://localhost:8000',
